@@ -1,0 +1,18 @@
+Alter procedure emp_insert
+
+@firstname	varchar(50),
+@lastname	varchar(50), 
+@MaritalStatus	varchar(20), 
+@income	int,
+@education	varchar(50) 
+
+As
+begin
+   
+   Insert into emp values(@firstname,@lastname,@MaritalStatus,@income,@education);
+End
+
+ EXec emp_insert 'Raj','Patel','UM',50000,'MA'
+
+
+Select * From emp
